@@ -26,7 +26,14 @@ Source: http://ufldl.stanford.edu/housenumbers/
 
 ## Goal & Metrics
 
-The target is to correctly measure all the digits in the image. Thus, the metric is accuracy, and is determined by how many images we correctly classify ALL digits.
+The target is to correctly measure all the digits in the image. Thus, the metric is accuracy, and is determined by how many images we correctly classify ALL digits. Here are some definitions that I use to evaluate the performance of the model:
+
+![equation](https://latex.codecogs.com/gif.latex?\text{multi-digit&space;accuracy}&space;=&space;\frac{\text{correctly&space;classified&space;images}}{\text{total&space;number&space;of&space;images}})
+
+![equation](https://latex.codecogs.com/gif.latex?\text{individual&space;digit&space;accuracy}&space;=&space;\frac{\text{correctly&space;classified&space;digits}}{\text{total&space;number&space;of&space;digits}})
+
+Although it is straight forward, it is important to formally define these equations.
+
 
 ## Steps
 1. Explore & preprocess data ([svhn-preprocessing.ipynb]() notebook)
@@ -62,7 +69,7 @@ See notebook [svhn-model.ipynb]() for more details.
 ## Results
 I trained the model for 80 epochs with a batch size of 512 images per step.
 
-**Original Image (Multi-digit) Test Accuracy**: 94.399%
+**Multi-digit Test Accuracy**: 94.399%
 
 **Individual Digit Test Accuracy**: 96.620%
 
