@@ -47,7 +47,8 @@ The target is to correctly measure all the digits in the image. Thus, the metric
   - Visualize images (correct & incorrect) for better understanding of model strengths/weaknesses
 
 ## Model Architecture
-- Xavier Initializations of weights in the network
+- `xavier` initialization of weights in the network
+  - proved perform better than `he` initialization
 - Three blocks with two convolutional layers (`conv -> batch_norm -> leaky_relu -> avg_pooling`)
 - Flatten layer
 - Two fully connected (dense) layers with Leaky ReLU activation functions
@@ -61,10 +62,10 @@ See notebook [svhn-model.ipynb]() for more details.
 ## Results
 I trained the model for 80 epochs with a batch size of 512 images per step.
 
-**Original Image (Multi-digit) Test Accuracy**: 93.901%
+**Original Image (Multi-digit) Test Accuracy**: 94.399%
 
-**Individual Digit Test Accuracy**: 96.381%
+**Individual Digit Test Accuracy**: 96.620%
 
-**Individual Digit F1 Score**: 0.9619
+**Individual Digit F1 Score**: 0.9643
 
 For more details about implementation, training, and evaluation of the model, see the jupyter notebook [svhn-model.ipynb]().
