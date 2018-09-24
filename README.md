@@ -6,11 +6,15 @@ Using Tensorflow, I designed a convolutional neural network to classify street v
 
 For this project, I utilized **Format 1** shown below.
 
-- 10 classes, 1 for each digit. Digit '1' has label 1, '9' has label 9 and '0' has label 10.
-- 73,257 digits for training, 26,032 digits for testing, and 531,131 additional, somewhat less difficult samples, to use as extra training data
-- Comes in two formats:
-  1. **Original images with character level bounding boxes.**
-  2. MNIST-like 32-by-32 images centered around a single character (many of the images do contain some distractors at the sides).
+- Dataset comes in two formats:
+   - **Format 1.**
+     - **Original images with character level bounding boxes.**
+   - Format 2.
+      - MNIST-like 32-by-32 images centered around a single character (many of the images do contain some distractors at the sides).
+- Labels
+  - 10 classes, 1 for each digit. Digit '1' has label 1, '9' has label 9 and '0' has label 10.
+- **Number of digits** in all images for each set
+  - 73,257 digits for training, 26,032 digits for testing, and 531,131 additional, somewhat less difficult samples, to use as extra training data
 
 Here are the sizes for the datasets I used in this project:
 
@@ -53,9 +57,9 @@ Although it is straight forward, it is important to formally define these equati
   - Use confusion matrix & F1 score to give a better idea of model performance
   - Visualize images (correct & incorrect) for better understanding of model strengths/weaknesses
 
-## Model Architecture
+## Model Architecture Overview
 - `xavier` initialization of weights in the network
-  - proved perform better than `he` initialization
+  - proved to perform better than `he` initialization
 - Three blocks with two convolutional layers (`conv -> batch_norm -> leaky_relu -> avg_pooling`)
 - Flatten layer
 - Two fully connected (dense) layers with Leaky ReLU activation functions
@@ -76,3 +80,8 @@ I trained the model for 80 epochs with a batch size of 512 images per step.
 **Individual Digit F1 Score**: 0.9643
 
 For more details about implementation, training, and evaluation of the model, see the jupyter notebook [svhn-model.ipynb]().
+
+## License
+
+See the [LICENSE](https://github.com/k-chuang/tf-svhn/blob/master/LICENSE) file for license rights and limitations (MIT).
+
