@@ -40,7 +40,7 @@ Although it is straight forward, it is important to formally define these equati
 
 
 ## Steps
-1. Explore & preprocess data ([svhn-preprocessing.ipynb]() notebook)
+1. Explore & preprocess data ([svhn-preprocessing.ipynb](https://github.com/k-chuang/tf-svhn/blob/master/svhn-preprocessing.ipynb) notebook)
   - Given format 2, we want to read in the provided mat files with the bounding box information, crop the images by the bounding boxes (and expand by a percentage), and resize all these images to a standard 32x32 size.
   - Explore & visualize the data get a better understanding of the dataset
     - Plot distributions of the number of digits in each image (0-5 digits per image)
@@ -66,7 +66,7 @@ Although it is straight forward, it is important to formally define these equati
 - Five parallel fully connected `softmax` layers
   - For predicting probabilities of 5 digits
 
-See notebook [svhn-model.ipynb]() for more details.
+See notebook [svhn-model.ipynb](https://github.com/k-chuang/tf-svhn/blob/master/svhn-model.ipynb) for more details.
 
 
 
@@ -79,7 +79,7 @@ I trained the model for 80 epochs with a batch size of 512 images per step.
 
 **Individual Digit F1 Score**: 0.9643
 
-For more details about implementation, training, and evaluation of the model, see the jupyter notebook [svhn-model.ipynb]().
+For more details about implementation, training, and evaluation of the model, see the jupyter notebook [svhn-model.ipynb](https://github.com/k-chuang/tf-svhn/blob/master/svhn-model.ipynb).
 
 ## License
 
